@@ -1,4 +1,4 @@
-i/*
+/*
  * File: 9-print_comb.c
  * Auth: Brennan D Baraban
  */
