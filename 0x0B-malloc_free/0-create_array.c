@@ -4,8 +4,8 @@
 
 /**
  * create_array - create array of size size and assign char c
- * size: size of array
- * assigned char
+ * @size: size of array
+ * @c: assigned char
  * Description: creat array of size size and assign char c
  * Return: pointer to array, NULL if fail
  */
