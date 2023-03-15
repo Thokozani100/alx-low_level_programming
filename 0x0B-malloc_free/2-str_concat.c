@@ -1,42 +1,45 @@
-#include "main.h"
 #include <stdlib.h>
+#include "holberton.h"
+
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * **alloc_grid - creates a two dimensional array of ints
+ * @width: width of the matrix
+ * @height: height of the matrix
+ *
+ * Return: pointer to the created matrix (Success)
+ * or NULL (Error)
  */
-
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
+	int **array;
+	int i, j;
 
-	char *conct;
-
-	int i, ci;
-
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-		i = ci = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ci] != '\0')
-		ci++;
-	conct = malloc(sizeof(char) * (i + ci + 1));
-	if (conct == NULL)
+	if (height <= 0 || width <= 0)
 		return (NULL);
-	i = ci = 0;
-	while (s1[i] != '\0')
+
+	array = (int **) malloc(sizeof(int *) * height);
+
+	if (array == NULL)
+		return (NULL);
+	for (i = 0; i < height; i++)
 	{
-		conct[i] = s1[i];
-		i++;
+		array[i] = (int *) malloc(sizeof(int) * width);
+		if (array[i] == NULL)
+		{
+			free(array);
+			for (j = 0; j <= i; j++)
+				free(array[j]);
+			return (NULL);
+		}
 	}
-	while (s2[ci] != '\0')
+
+	for (i = 0; i < height; i++)
 	{
-		conct[i] = s2[ci];
-		i++, ci++;
+		for (j = 0; j < width; j++)
+		{
+			array[i][j] = 0;
+		}
 	}
-	conct[i] = '\0';
-	return (conct);
+	return (array);
 }
+
