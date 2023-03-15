@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * main - prints number of arguments that are passed when running
- * the program but not including program name.
  * @argc: argument count
  * @argv: array of argument strings
  * Return: success (0)
