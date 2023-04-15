@@ -1,6 +1,17 @@
+
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 char *create_buffer(char *file);
 void close_file(int fd);
+
+/**
+ * create_buffer - makes 1024 bytes for an buffer.
+ * @file: The name of the file buffer it is storing the chars
+ *
+ * Return: an pointer to  newly-allocated buffer.
+ */
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -18,8 +29,8 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * close_file - Closes the  file descriptors.
+ * @fd: Th targete file descriptor to be closed.
  */
 void close_file(int fd)
 {
@@ -33,17 +44,6 @@ void close_file(int fd)
 		exit(100);
 	}
 }
-
-/**
- * main - Copies the contents of a file to another file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: 0 on success.
- *
- * Description: If the argument count is incorrect - exit code 97.
- *              If file_from does not exist or cannot be read - exit code 98.
- *              If file_to cannot be created or written to - ex/
 int main(int argc, char *argv[])
 {
 	int from, to, r, w;
