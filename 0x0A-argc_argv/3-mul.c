@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
- * The main - prints  multiplication of two integers
- * @argc: argument count
- * @argv: argument vector
- * Return: 0 if true, 1 if false
+ * main - multiplies 2 num
+ * @argc: the number of arguments pass to the program
+ * @argv: a arr of strings containing the program arguments
+ *
+ * Return: 0 if the multiplication is successful, otherwise 1
  */
 int main(int argc, char *argv[])
 {
