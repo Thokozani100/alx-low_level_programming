@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 /**
  * binary_to_uint - its conv an binary num to an unsigned int.
