@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * read_text-  read an text file  and than print out its content to STDOUT
+ * read_textfile - reads an text file and prints the content to STDOUT
  *
- * @filename:name of file being read
- * @letters :the amount of letters to be print and read
+ * @filename: name of an file being read
+ * @letters: an amount of letters to be read and printed
  *
- * return:actual number of letters to read and printed
+ * Return:the actual numbers of letters read and printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
